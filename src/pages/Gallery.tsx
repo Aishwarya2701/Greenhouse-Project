@@ -1,27 +1,27 @@
-import { motion } from 'framer-motion';
-import { PageTransition } from '../components/PageTransition';
+import { motion } from "framer-motion";
+import { PageTransition } from "../components/PageTransition";
 
 export function Gallery() {
   const images = [
     {
-      url: './dist/assets/aqi dash1.jpg',
-      title: 'AQI Dashboard',
-      description: 'AQI dashboard for real time analysis',
+      url: "/assets/aqi_dash1.jpg",
+      title: "AQI Dashboard",
+      description: "AQI dashboard for real-time analysis",
     },
     {
-      url: './dist/assets/aqi1.jpg',
-      title: 'AQI Sensor Network',
-      description: 'Advanced IoT sensors for environmental monitoring',
+      url: "/assets/aqi1.jpg",
+      title: "AQI Sensor Network",
+      description: "Advanced IoT sensors for environmental monitoring",
     },
     {
-      url: './dist/assets/plant dash1.jpg',
-      title: 'Plant Dashboard',
-      description: 'Healthy plants thriving in optimal conditions',
+      url: "/assets/plant_dash1.jpg",
+      title: "Plant Dashboard",
+      description: "Healthy plants thriving in optimal conditions",
     },
     {
-      url: './dist/assets/plant sensor1.jpg',
-      title: 'Plant Health Monitoring',
-      description: 'Promoting sustainable farming practices',
+      url: "/assets/plant_sensor1.jpg",
+      title: "Plant Health Monitoring",
+      description: "Promoting sustainable farming practices",
     },
   ];
 
@@ -55,10 +55,7 @@ export function Gallery() {
                 transition={{ delay: index * 0.1 }}
                 className="group relative overflow-hidden rounded-xl shadow-lg"
               >
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
-                >
+                <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>
                   <img
                     src={image.url}
                     alt={image.title}
@@ -75,6 +72,7 @@ export function Gallery() {
             ))}
           </div>
         </div>
+
         {/* Footer */}
         <footer className="bg-gray-900 text-white text-center py-6 mt-16">
           <p className="text-lg">© 2025 Smart Greenhouse Project. All rights reserved.</p>
