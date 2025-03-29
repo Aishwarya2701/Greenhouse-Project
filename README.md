@@ -43,7 +43,9 @@ The **Smart Plant Health Monitoring Dashboard** is an IoT-powered real-time anal
 This project is open-source and available under the **MIT License**.
 
 ## 💡 Authors
-Developed with ❤️ by **Team AirLeaf**.
+© 2025 Smart Greenhouse Project. All rights reserved.
+
+Designed & Developed with ❤️ by Team AirLeaf.
 
 ---
 🌿 *Empowering Smart Farming with IoT!*
