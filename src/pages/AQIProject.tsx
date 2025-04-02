@@ -136,8 +136,7 @@ export function AQIProject() {
             <p className="text-lg text-gray-600 mb-6">
               The system uses MQ2 sensors to sense the presence of harmful gases/compounds in the air 
               and constantly transmit this data. This keeps measuring air quality level and reports it. 
-              The sensors interact with Arduino Uno contains microcontroller (ATmega 328) processes this 
-              data and transmits it over the application. This allows the owner of the device to monitor 
+              The sensors interact with ESP8266 and processes this data and transmits it over the application. This allows the owner of the device to monitor 
               air pollution in different areas with the data and act against it.
               <a 
                 href="https://blynk.cloud/dashboard/447458/global/devices/1/organization/447458/devices/1481916/dashboard" 
