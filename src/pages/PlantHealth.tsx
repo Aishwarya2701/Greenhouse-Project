@@ -3,6 +3,8 @@ import { PageTransition } from '../components/PageTransition';
 import { Dashboard } from '../components/Dashboard';
 import { Leaf, AlertCircle, Thermometer, Droplets, Cpu, Battery, Wrench, Check } from 'lucide-react';
 import { PlantMonitor3D } from '../components/PlantMonitor3D';
+import { PlantCompatibilityTable } from '../components/PlantCompatibilityTable';
+import { GreenhouseFact } from '../components/GreenhouseFact';
 
 export function PlantHealth() {
   const components = [
@@ -46,6 +48,8 @@ export function PlantHealth() {
         </div>
 
         <div className="container mx-auto px-6 py-16">
+          <GreenhouseFact />
+
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -79,52 +83,23 @@ export function PlantHealth() {
             </motion.div>
           </div>
 
-          {/* Solution Features */}
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              className="bg-white rounded-xl shadow-lg p-8"
-            >
-              <div className="flex items-center gap-3 mb-6">
-                <Droplets className="text-blue-500 w-8 h-8" />
-                <h3 className="text-2xl font-bold text-gray-800">Soil Moisture Measurement</h3>
-              </div>
-              <ul className="space-y-4 text-gray-600">
-                <li className="flex items-start gap-3">
-                  <span className="h-2 w-2 bg-blue-500 rounded-full mt-2.5" />
-                  Accurate sensors provide precise soil moisture readings
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="h-2 w-2 bg-blue-500 rounded-full mt-2.5" />
-                  Prevents overwatering and root rot
-                </li>
-              </ul>
-            </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="mb-12"
+          >
+            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Live Monitoring Dashboard</h2>
+            <Dashboard />
+          </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              className="bg-white rounded-xl shadow-lg p-8"
-            >
-              <div className="flex items-center gap-3 mb-6">
-                <Thermometer className="text-red-500 w-8 h-8" />
-                <h3 className="text-2xl font-bold text-gray-800">Temperature & Humidity Sensing</h3>
-              </div>
-              <ul className="space-y-4 text-gray-600">
-                <li className="flex items-start gap-3">
-                  <span className="h-2 w-2 bg-red-500 rounded-full mt-2.5" />
-                  Continuous temperature monitoring for stress prevention
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="h-2 w-2 bg-red-500 rounded-full mt-2.5" />
-                  Humidity tracking for optimal growth conditions
-                </li>
-              </ul>
-            </motion.div>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="mb-12"
+          >
+            <PlantCompatibilityTable />
+          </motion.div>
 
-          {/* Components Used */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -149,8 +124,6 @@ export function PlantHealth() {
             </div>
           </motion.div>
 
-          <div className="container mx-auto px-6 py-16">
-          {/* How It Works Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -158,9 +131,9 @@ export function PlantHealth() {
           >
             <h2 className="text-3xl font-bold text-gray-800 mb-6">How It Works</h2>
             <p className="text-lg text-gray-600">
-              The IoT sensor system gathers environmental data and transmits it to the ESP8266 (Node MCU).
-              The processed data is sent to ThingSpeak for real-time visualization and analysis.
-              The system automatically triggers the water pump when soil moisture drops below optimal levels.
+              The sensor network collects environmental data and sends it to the ESP8266 (Node MCU).
+              The ESP then processes and transmits this data to our cloud database for storage and visualization.
+              This enables real-time monitoring, historical analysis, and automated responses through the water pump system.
               <a 
                 href="https://thingspeak.mathworks.com/channels/2867628" 
                 target="_blank" 
@@ -172,7 +145,6 @@ export function PlantHealth() {
             </p>
           </motion.div>
 
-          {/* Advantages */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -195,13 +167,7 @@ export function PlantHealth() {
               ))}
             </div>
           </motion.div>
-          </div>
         </div>
-        {/* Footer */}
-        <footer className="bg-gray-900 text-white text-center py-6 mt-16">
-          <p className="text-lg">© 2025 Smart Greenhouse Project. All rights reserved.</p>
-          <p className="text-sm">Designed & Developed with ❤️ by Team AirLeaf</p>
-        </footer>
       </div>
     </PageTransition>
   );
